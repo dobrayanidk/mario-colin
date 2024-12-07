@@ -1,0 +1,529 @@
+<html><head><base href="include base href here"><title>Secundaria Oficial No. 0438 "LIC. MARIO COLIN SANCHEZ"</title>
+<style>
+:root {
+  --primary-color: #1a4b8c;
+  --secondary-color: #f4b942;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background-color: #f5f5f5;
+}
+
+.header {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 1rem;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+  text-align: center;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.school-name {
+  font-size: 2rem; /* Slightly smaller to accommodate longer text */
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.navbar {
+  display: none; /* This will hide the navbar */
+}
+
+.inscription-section {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.inscription-header {
+  text-align: center;
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+}
+
+.inscription-header h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.inscription-dates {
+  background-color: var(--secondary-color);
+  padding: 1rem;
+  border-radius: 5px;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.grade-requirements {
+  margin-bottom: 3rem;
+}
+
+.grade-requirements h3 {
+  color: var(--primary-color);
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--secondary-color);
+}
+
+.requirements-list {
+  list-style: none;
+}
+
+.requirements-list li {
+  padding: 0.5rem 0;
+  display: flex;
+  align-items: center;
+}
+
+.requirements-list li::before {
+  content: "•";
+  color: var(--primary-color);
+  font-weight: bold;
+  margin-right: 1rem;
+}
+
+.important-note {
+  background-color: #ffe8e8;
+  padding: 1rem;
+  border-left: 4px solid #ff4444;
+  margin: 1rem 0;
+}
+
+.download-button {
+  display: none; /* Hide the download buttons */
+}
+
+.mission-vision-section {
+  background-color: white;
+  padding: 2rem;
+  margin-top: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  max-width: 1200px;
+  margin: 2rem auto;
+}
+
+.mission-vision-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.mission, .vision {
+  padding: 2rem;
+  border-radius: 5px;
+  background-color: #f8f9fa;
+  border-left: 4px solid var(--primary-color);
+}
+
+.mission h3, .vision h3 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+footer {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 2rem;
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.welcome-section {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.welcome-text {
+  line-height: 1.8;
+  color: #333;
+  font-size: 1.1rem;
+  text-align: justify;
+  margin-bottom: 2rem;
+}
+
+.welcome-header {
+  color: var(--primary-color);
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.about-us-section {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.about-us-header h2 {
+  color: var(--primary-color);
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.about-us-header h2::after {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 3px;
+  background: var(--secondary-color);
+  margin: 1rem auto;
+}
+
+.history-container, .team-container {
+  margin-bottom: 3rem;
+}
+
+.history-container h3, .values-container h3, .team-container h3 {
+  color: var(--primary-color);
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.value-item {
+  text-align: center;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.value-item:hover {
+  transform: translateY(-5px);
+}
+
+.value-item svg {
+  margin-bottom: 1rem;
+}
+
+.value-item h4 {
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.value-item p {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.map-section {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.map-container h2 {
+  color: var(--primary-color);
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.map-container iframe {
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 768px) {
+  .navbar ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .navbar li {
+    margin: 0.5rem 0;
+  }
+  
+  .mission-vision-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .about-us-section {
+    padding: 1rem;
+  }
+
+  .map-section {
+    padding: 1rem;
+  }
+  
+  .map-container iframe {
+    height: 300px;
+  }
+
+  .logo {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .school-name {
+    font-size: 1.5rem; /* Even smaller on mobile devices */
+  }
+}
+</style>
+</head>
+<body>
+  <header class="header">
+    <div class="logo">
+      <svg width="50" height="50" viewBox="0 0 50 50">
+        <circle cx="25" cy="25" r="20" fill="var(--secondary-color)"/>
+        <text x="25" y="30" text-anchor="middle" fill="var(--primary-color)" font-weight="bold">MC</text>
+      </svg>
+      <h1 class="school-name">Secundaria Oficial No. 0438 "LIC. MARIO COLIN SANCHEZ"</h1>
+    </div>
+  </header>
+
+  <section class="welcome-section">
+    <h2 class="welcome-header">Bienvenidos a la Secundaria Oficial No. 0438 "LIC. MARIO COLIN SANCHEZ"</h2>
+    <div class="welcome-text">
+      <p>Estimados padres de familia:</p>
+      <br>
+      <p>En la Secundaria Oficial No. 0438 "LIC. MARIO COLIN SANCHEZ" le damos mucha importancia junto a la enseñanza, a fomentar Los valores, la habilidad para trabajar en equipo, la constancia y la flexibilidad. En nuestra escuela es primordial promover la convivencia armoniosa, es por eso que los alumnos aprenden a respetar a los demás y a practicar la tolerancia a través de diversas prácticas y actividades inter-escolares.</p>
+      <br>
+      <p>En nuestra Escuela existen Profesores expertos por su estudio didáctico-metódico, y con años de experiencia. Por lo tanto cumplimos con el programa educativo de la SEP, apegado a sus normas y complementado con programas Institucionales que a través del desarrollo de proyectos potencian sus habilidades, mismas que desarrollan competencias para la vida.</p>
+    </div>
+  </section>
+
+  <section class="about-us-section">
+    <div class="about-us-header">
+      <h2>Nosotros</h2>
+    </div>
+    
+    <div class="about-us-content">
+      <div class="history-container">
+        <h3>Nuestra Historia</h3>
+        <p>La Secundaria Oficial No. 0438 "LIC. MARIO COLIN SANCHEZ" fue fundada con el propósito de brindar educación de calidad a la juventud de nuestra comunidad. A lo largo de los años, nos hemos consolidado como una institución comprometida con la excelencia académica y el desarrollo integral de nuestros estudiantes.</p>
+      </div>
+
+      <div class="values-container">
+        <h3>Nuestros Valores</h3>
+        <div class="values-grid">
+          <div class="value-item">
+            <svg width="40" height="40" viewBox="0 0 40 40">
+              <circle cx="20" cy="20" r="18" fill="var(--secondary-color)" opacity="0.2"/>
+              <text x="20" y="25" text-anchor="middle" fill="var(--primary-color)" font-size="12">R</text>
+            </svg>
+            <h4>Respeto</h4>
+            <p>Fomentamos el respeto mutuo y la dignidad de cada persona.</p>
+          </div>
+          <div class="value-item">
+            <svg width="40" height="40" viewBox="0 0 40 40">
+              <circle cx="20" cy="20" r="18" fill="var(--secondary-color)" opacity="0.2"/>
+              <text x="20" y="25" text-anchor="middle" fill="var(--primary-color)" font-size="12">E</text>
+            </svg>
+            <h4>Excelencia</h4>
+            <p>Buscamos la mejora continua en todo lo que hacemos.</p>
+          </div>
+          <div class="value-item">
+            <svg width="40" height="40" viewBox="0 0 40 40">
+              <circle cx="20" cy="20" r="18" fill="var(--secondary-color)" opacity="0.2"/>
+              <text x="20" y="25" text-anchor="middle" fill="var(--primary-color)" font-size="12">I</text>
+            </svg>
+            <h4>Integridad</h4>
+            <p>Actuamos con honestidad y ética en todas nuestras acciones.</p>
+          </div>
+          <div class="value-item">
+            <svg width="40" height="40" viewBox="0 0 40 40">
+              <circle cx="20" cy="20" r="18" fill="var(--secondary-color)" opacity="0.2"/>
+              <text x="20" y="25" text-anchor="middle" fill="var(--primary-color)" font-size="12">C</text>
+            </svg>
+            <h4>Compromiso</h4>
+            <p>Dedicados a la formación integral de nuestros estudiantes.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="team-container">
+        <h3>Nuestro Equipo</h3>
+        <p>Contamos con un equipo docente altamente calificado y comprometido con la educación. Nuestros profesores son especialistas en sus áreas y mantienen una formación continua para garantizar la mejor educación para nuestros estudiantes.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="mission-vision-section">
+    <div class="mission-vision-container">
+      <div class="mission">
+        <h3>Misión</h3>
+        <p>Formar estudiantes integrales con excelencia académica, valores sólidos y habilidades para la vida, contribuyendo al desarrollo de ciudadanos comprometidos con su comunidad y preparados para los retos del futuro.</p>
+      </div>
+      <div class="vision">
+        <h3>Visión</h3>
+        <p>Ser una institución educativa líder reconocida por su excelencia académica, innovación pedagógica y formación integral, que prepare a los estudiantes para ser agentes de cambio positivo en la sociedad.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="inscription-section">
+    <div class="inscription-header">
+      <h2>INSCRIPCIONES 2024 - 2025</h2>
+      <div class="inscription-dates">
+        <h3>TURNO MATUTINO</h3>
+        <p>Primer Grado, Segundo Grado y Tercer Grado</p>
+        <p><strong>22 y 23 de Agosto</strong></p>
+        <p>de 8:00 a 10:00 Horas</p>
+      </div>
+    </div>
+
+    <div class="grade-requirements">
+      <h3>Primer Grado</h3>
+      <ul class="requirements-list">
+        <li>Solicitud de inscripción 1er grado (Original y llenado a computadora con fotografía)</li>
+        <li>Documento de Asignación SAID</li>
+        <li>3 Copias de Reporte de Evaluación 6° (Boleta de 6°)</li>
+        <li>3 Copias del Certificado de Primaria</li>
+        <li>3 Copias del Acta de Nacimiento</li>
+        <li>3 Copias del CURP Alumno (Actualizado)</li>
+        <li>3 Copias del CURP de 2 Tutores (Actualizado)</li>
+        <li>3 Copias de los INE TUTOR 1 é INE TUTOR 2 ampliado al 200%</li>
+        <li>Historial Médico</li>
+        <li>ORIGINAL CERTIFICADO MEDICO DE INSTITUCION OFICIAL</li>
+        <li>3 Copias de Comprobante de Domicilio</li>
+        <li>Original Baucher de Aportación (Con nombre del alumno y grado)</li>
+        <li>Normas de convivencia firmada</li>
+        <li>2 FOLDER CARTA COLOR BEIGE (PAJA), Tamaño Carta</li>
+      </ul>
+    </div>
+
+    <div class="grade-requirements">
+      <h3>Segundo Grado</h3>
+      <div class="important-note">
+        <p>"EL UNIFORME DE PRIMER GRADO LO PODRA ADQUIRIR DENTRO DE LA INSTITUCION"</p>
+      </div>
+      <ul class="requirements-list">
+        <li>Solicitud de inscripción 2do grado (Original y llenado a computadora con fotografía)</li>
+        <li>3 Copias de la boleta Primer (1°) grado</li>
+        <li>3 Copias del CURP Alumno (Actualizado)</li>
+        <li>3 Copias de los CURP TUTOR 1 y CURP TUTOR 2 (Actualizado)</li>
+        <li>3 Copias de los INE TUTOR 1 é INE TUTOR 2 ampliado al 200%</li>
+        <li>Original Baucher de Aportación (Con nombre del alumno y grado)</li>
+        <li>Normas de convivencia firmada</li>
+        <li>Historial Médico</li>
+        <li>ORIGINAL CERTIFICADO MEDICO DE INSTITUCION OFICIAL</li>
+      </ul>
+    </div>
+
+    <div class="grade-requirements">
+      <h3>Tercer Grado</h3>
+      <ul class="requirements-list">
+        <li>Solicitud de inscripción (llenar original y a computadora)</li>
+        <li>3 Copias de la boleta Segundo (2°) grado</li>
+        <li>3 Copias del CURP Alumno (Actualizado)</li>
+        <li>3 Copias de los CURP TUTOR 1 y CURP TUTOR 2 (Actualizado)</li>
+        <li>3 Copias de los INE TUTOR 1 é INE TUTOR 2 ampliado al 200%</li>
+        <li>Original Baucher de Aportación (Con nombre del alumno y grado)</li>
+        <li>Normas de convivencia firmada</li>
+        <li>Historial Médico</li>
+        <li>ORIGINAL CERTIFICADO MEDICO DE INSTITUCION OFICIAL</li>
+      </ul>
+    </div>
+
+    <div class="important-note">
+      <p>Constancia médica actualizada, solo para alumnos que presenten tratamiento especializado de alguna enfermedad crónica.</p>
+    </div>
+  </section>
+
+  <section class="map-section">
+    <div class="map-container">
+      <h2>Ubicación</h2>
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3764.8153305499396!2d-98.97752492393767!3d19.335776981930705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ce1d6d444ad71f%3A0x4c78157294ab259a!2sTenochtitlan%2C%20Anc%C3%B3n%20de%20Los%20Reyes%2C%2056410%20Los%20Reyes%20Acaquilpan%2C%20M%C3%A9x.!5e0!3m2!1sen!2smx!4v1690144847654!5m2!1sen!2smx"
+        width="100%" 
+        height="450" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </section>
+
+  <footer>
+    <p>Secundaria Oficial No. 0438 "LIC. MARIO COLIN SANCHEZ"</p>
+    <p>Dirección: Av. Principal #123, Colonia Centro</p>
+    <p>Teléfono: (555) 123-4567</p>
+    <p>Email: contacto@escuelamariocolin.edu.mx</p>
+  </footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const requirementLists = document.querySelectorAll('.requirements-list li');
+  
+  requirementLists.forEach((item, index) => {
+    item.style.opacity = '0';
+    item.style.transform = 'translateX(-20px)';
+    item.style.transition = 'all 0.3s ease-in-out';
+    
+    setTimeout(() => {
+      item.style.opacity = '1';
+      item.style.transform = 'translateX(0)';
+    }, index * 100);
+  });
+
+  const welcomeText = document.querySelector('.welcome-text');
+  welcomeText.style.opacity = '0';
+  welcomeText.style.transform = 'translateY(20px)';
+  welcomeText.style.transition = 'all 0.8s ease-in-out';
+  
+  setTimeout(() => {
+    welcomeText.style.opacity = '1';
+    welcomeText.style.transform = 'translateY(0)';
+  }, 300);
+
+  const valueItems = document.querySelectorAll('.value-item');
+  valueItems.forEach((item, index) => {
+    item.style.opacity = '0';
+    item.style.transform = 'translateY(20px)';
+    item.style.transition = 'all 0.5s ease-in-out';
+    
+    setTimeout(() => {
+      item.style.opacity = '1';
+      item.style.transform = 'translateY(0)';
+    }, 300 + (index * 100));
+  });
+});
+</script>
+</body></html>
